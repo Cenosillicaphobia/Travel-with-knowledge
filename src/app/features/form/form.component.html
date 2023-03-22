@@ -1,0 +1,46 @@
+<div class="form-container">
+
+  <h3 class="form-title"> Calculate your trip footprint</h3>
+
+  <form class="form">
+
+    <div class="select-container">
+      <label>number of passengers</label>
+      <input type="number">
+    </div>
+
+
+    <div class="select-container">
+      <label>Departure airport code</label>
+      <select name="origins">
+        <option *ngFor=" let airport of airports">{{airport.city}}({{airport.code}})</option>
+      </select>
+    </div>
+
+    <div class="select-container">
+      <label>Arrival airport code</label>
+      <select name="destination">
+        <option *ngFor=" let airport of airports">{{airport.city}}({{airport.code}})</option>
+      </select>
+    </div>
+
+    <div class="select-container">
+      <label>Cabin class</label>
+      <select name="cabin class">
+        <option>economy</option>
+        <option>premium_economy</option>
+        <option>business</option>
+        <option>firsty</option>
+      </select>
+    </div>
+    
+    <div class="select-container">
+      <label>Value</label>
+      <select name="origins">
+        <option *ngFor=" let airport of airports">{{airport.city}}({{airport.code}})</option>
+      </select>
+    </div>
+
+
+  </form>
+</div>
