@@ -9,38 +9,27 @@
       <input name="passengers" type="number" ngModel required>
     </div>
 
-
     <div class="select-container">
       <label>Departure airport code</label>
-      <select name="origins" type="text" ngModel required>
-        <option *ngFor=" let airport of airports">{{airport.city}}({{airport.code}})</option>
+      <select name="origin" type="text" ngModel required>
+        <option *ngFor=" let airport of airports">{{airport.code}}</option>
       </select>
     </div>
 
     <div class="select-container">
       <label>Arrival airport code</label>
       <select name="destination" type="text" ngModel required>
-        <option *ngFor=" let airport of airports">{{airport.city}}({{airport.code}})</option>
+        <option *ngFor=" let airport of airports">{{airport.code}}</option>
       </select>
     </div>
 
     <div class="select-container">
       <label>Cabin class</label>
-      <select name="cabin class" type="text" ngModel required>
+      <select name="cabinClass" type="text" ngModel required>
         <option>economy</option>
         <option>premium_economy</option>
         <option>business</option>
         <option>firsty</option>
-      </select>
-    </div>
-    
-    <div class="select-container">
-      <label>Currencies</label>
-      <select name="currencies" type="text" ngModel required>
-        <option>EUR</option>
-        <option>USD</option>
-        <option>SEK</option>
-        <option>NOK</option>
       </select>
     </div>
 
