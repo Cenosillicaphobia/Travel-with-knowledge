@@ -2,31 +2,31 @@
 
   <h3 class="form-title"> Calculate your trip footprint</h3>
 
-  <form class="form">
+  <form class="form" #form="ngForm" (ngSubmit)="login(form)">
 
     <div class="select-container">
       <label>number of passengers</label>
-      <input type="number">
+      <input name="passengers" type="number" ngModel required>
     </div>
 
 
     <div class="select-container">
       <label>Departure airport code</label>
-      <select name="origins">
+      <select name="origins" type="text" ngModel required>
         <option *ngFor=" let airport of airports">{{airport.city}}({{airport.code}})</option>
       </select>
     </div>
 
     <div class="select-container">
       <label>Arrival airport code</label>
-      <select name="destination">
+      <select name="destination" type="text" ngModel required>
         <option *ngFor=" let airport of airports">{{airport.city}}({{airport.code}})</option>
       </select>
     </div>
 
     <div class="select-container">
       <label>Cabin class</label>
-      <select name="cabin class">
+      <select name="cabin class" type="text" ngModel required>
         <option>economy</option>
         <option>premium_economy</option>
         <option>business</option>
@@ -36,7 +36,7 @@
     
     <div class="select-container">
       <label>Currencies</label>
-      <select name="cabin class">
+      <select name="currencies" type="text" ngModel required>
         <option>EUR</option>
         <option>USD</option>
         <option>SEK</option>
@@ -44,7 +44,7 @@
       </select>
     </div>
 
-    <button>Calculate</button>
+    <button type="submit" [disabled]="form.invalid">Calculate</button>
 
   </form>
 </div>

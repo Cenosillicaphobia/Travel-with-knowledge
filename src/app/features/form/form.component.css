@@ -42,6 +42,18 @@ input {
   text-align: center;
 }
 
+select.ng-touched.ng-valid,
+input.ng-touched.ng-valid {
+  border: solid 1px green;
+  color: green;
+}
+
+select.ng-touched.ng-invalid,
+input.ng-touched.ng-invalid {
+  border: solid 1px red;
+  color: red;
+}
+
 button {
   width: fit-content;
   margin-top: 20px;
@@ -59,4 +71,11 @@ button:hover {
   border: solid 1px aliceblue;
   color: aliceblue;
   font-size: 35px;
+}
+
+button:disabled,
+button:disabled:hover {
+  background-color: aliceblue;
+  color: skyblue;
+  border: solid 1px skyblue
 }
