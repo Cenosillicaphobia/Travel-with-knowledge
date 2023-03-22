@@ -35,12 +35,16 @@
     </div>
     
     <div class="select-container">
-      <label>Value</label>
-      <select name="origins">
-        <option *ngFor=" let airport of airports">{{airport.city}}({{airport.code}})</option>
+      <label>Currencies</label>
+      <select name="cabin class">
+        <option>EUR</option>
+        <option>USD</option>
+        <option>SEK</option>
+        <option>NOK</option>
       </select>
     </div>
 
+    <button>Calculate</button>
 
   </form>
 </div>

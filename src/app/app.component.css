@@ -12,8 +12,16 @@
   height: 100%;
   transform-style: preserve-3d;
   z-index: -1;
-  margin-top: 150px;
   margin-bottom: 200px;
+}
+
+.home-text {
+  margin-top: 200px;
+  font-size: 80px;
+  color: rgb(240, 248, 255, 0.8);
+  text-shadow: 2px 2px 4px green;
+  align-self: flex-start;
+  text-align: center;
 }
 
 .earth {
@@ -33,13 +41,19 @@
   align-self: flex-end;
   width: 120px;
   transform: rotate(-45deg);
+  margin-bottom: 50px;
 }
 
 @media (max-width: 400px){
 
   .home-page {
-    margin-top: -50px;
+    margin-top: -200px;
     margin-bottom: 50px;
+  }
+
+  .home-text {
+    margin-top: 100px;
+    font-size: 40px;
   }
 
   .cloud {
