@@ -8,3 +8,12 @@
 body {
   background-color: skyblue;
 }
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: green;
+  font-size: 125%;
+}
