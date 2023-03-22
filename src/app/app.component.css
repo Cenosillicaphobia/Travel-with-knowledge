@@ -1,0 +1,54 @@
+.page-container {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: auto;
+  perspective: 10px;
+}
+
+.home-page {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+  margin-top: 150px;
+  margin-bottom: 200px;
+}
+
+.earth {
+  transform: translateZ(-10px) scale(2);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: contain;
+  z-index: -1;
+}
+
+.cloud {
+  transform: translateZ(-5px) scale(1);
+}
+
+.airplane {
+  align-self: flex-end;
+  width: 120px;
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 400px){
+
+  .home-page {
+    margin-top: -50px;
+    margin-bottom: 50px;
+  }
+
+  .cloud {
+    align-self: center;
+  }
+
+  .airplane {
+    width: 80px;
+    margin-bottom: 50px;
+  }
+
+}
