@@ -17,11 +17,6 @@
   text-shadow: 2px 2px 4px skyblue;
 }
 
-.response {
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-
 p { 
 font-size: 30px;
 font-weight: 700;
@@ -30,6 +25,25 @@ color: red;
 
 .img {
   animation: rotation 2s infinite linear;
+}
+
+button {
+  width: fit-content;
+  margin-top: 20px;
+  font-size: 30px;
+  padding: 5px;
+  background-color: aliceblue;
+  border: solid 1px green;
+  color: green;
+  border-radius: 10px;
+  transition: 0.25s;
+}
+
+button:hover {
+  background-color: skyblue;
+  border: solid 1px aliceblue;
+  color: aliceblue;
+  font-size: 35px;
 }
 
 @keyframes rotation {

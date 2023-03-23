@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-response',
@@ -8,15 +9,22 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class ResponseComponent implements OnInit{
 
-  constructor( private apiService: ApiService ){}
+  constructor( private apiService: ApiService, private router : Router ){}
+
+  isLoading:boolean = false
 
   responseData:any = '';
 
   ngOnInit(): void {
     
     setTimeout(()=>{
-      this.apiService.getFootprintData().subscribe((data)=>{ this.responseData = data, console.log(this.responseData)})
+      this.apiService.getFootprintData().subscribe((data)=>{ this.responseData = data})
     }, 3000);
+  }
+
+  goToHome(){
+    this.isLoading = true
+    setTimeout(()=>{ this.router.navigate(['/form'])}, 2000);
   }
 
 }
