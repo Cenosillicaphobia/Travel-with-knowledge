@@ -1,0 +1,14 @@
+<div class="response-container">
+
+  <h3 class="title">This trip emit:</h3>
+
+  <div class="response" *ngIf="responseData != ''; else loader">
+  <p>{{responseData.co2e | number: '4.0-0'}}</p>
+  <p>Kg of Co2</p>
+  </div>
+
+  <ng-template #loader>
+    <img class="img" src="assets/img/favicon.ico">
+  </ng-template>
+
+</div>

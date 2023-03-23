@@ -10,9 +10,11 @@ export class ApiService {
   REST_API = environment.REST_API;
   API_KEY = environment.API_KEY;
 
+  flyhtData:any
+
   constructor( private http: HttpClient ) { }
 
-  getFootprint(origin:string, destination:string, cabinClass:string, passengers:bigint){
+  setData(origin:string, destination:string, cabinClass:string, passengers:bigint){
 
     let data = {
       legs: [
@@ -25,13 +27,11 @@ export class ApiService {
       ]
     };
 
-    let header = {
-      Authorization: `Bearer ${this.API_KEY}`  
-    }
-    
-    this.http.post(this.REST_API, data, { headers: header})
-    .subscribe( data => { console.log(data)});
-    
+    return this.flyhtData = data;
   }
+
+  getFootprintData(){
+    return this.http.post(this.REST_API, this.flyhtData, { headers: { Authorization: `Bearer ${this.API_KEY}` }});
+  };
 
 }

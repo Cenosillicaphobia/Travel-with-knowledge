@@ -1,0 +1,42 @@
+.response-container {
+  width: 75%;
+  margin: auto;
+  padding: 20px;
+  margin-bottom: 100px;
+  background-color: rgb(240, 248, 255, 0.8);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.title {
+  font-size: 60px;
+  text-shadow: 2px 2px 4px skyblue;
+}
+
+.response {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+p { 
+font-size: 30px;
+font-weight: 700;
+color: red;
+}
+
+.img {
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
