@@ -17,7 +17,7 @@ export class FormComponent {
 
   login( form: NgForm ){
     
-    this.apiService.getFootprint(form.value.origin, form.value.destination, form.value.cabinClass, form.value.passengers);
+    this.apiService.getFootprint(form.value.origin.slice(-4, -1), form.value.destination.slice(-4, -1), form.value.cabinClass, form.value.passengers);
 
   }
 

@@ -12,24 +12,24 @@
     <div class="select-container">
       <label>Departure airport code</label>
       <select name="origin" type="text" ngModel required>
-        <option *ngFor=" let airport of airports">{{airport.code}}</option>
+        <option *ngFor=" let airport of airports">{{airport.city}} ({{airport.code}})</option>
       </select>
     </div>
 
     <div class="select-container">
       <label>Arrival airport code</label>
       <select name="destination" type="text" ngModel required>
-        <option *ngFor=" let airport of airports">{{airport.code}}</option>
+        <option *ngFor=" let airport of airports">{{airport.city}} ({{airport.code}})</option>
       </select>
     </div>
 
     <div class="select-container">
       <label>Cabin class</label>
       <select name="cabinClass" type="text" ngModel required>
+        <option>unknown</option>
         <option>economy</option>
-        <option>premium_economy</option>
         <option>business</option>
-        <option>firsty</option>
+        <option>first</option>
       </select>
     </div>
 
