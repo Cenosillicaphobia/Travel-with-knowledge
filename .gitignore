@@ -46,4 +46,5 @@ Thumbs.db
 
 .angular
 .editorconfig
+environments.ts
 

@@ -1,10 +1,14 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'environments';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
+
+  REST_API = environment.REST_API;
+  API_KEY = environment.API_KEY;
 
   constructor( private http: HttpClient ) { }
 
@@ -22,10 +26,10 @@ export class ApiService {
     };
 
     let header = {
-      Authorization: 'Bearer RJ0PSQYEYWMDJDGVV3GRVETYZXRN' 
+      Authorization: `Bearer ${this.API_KEY}`  
     }
     
-    this.http.post('https://beta3.api.climatiq.io/travel/flights', data, { headers: header})
+    this.http.post(this.REST_API, data, { headers: header})
     .subscribe( data => { console.log(data)});
     
   }
