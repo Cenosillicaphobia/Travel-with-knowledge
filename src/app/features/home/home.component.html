@@ -1,0 +1,18 @@
+<div class="home-container">
+
+  <div *ngIf="!isLoading; else loader">
+    <h3 class="title">Air traffic pollution: how much does it impact on the environment?</h3>
+    <p>
+      About 2.4% of global CO2 emissions come from air traffic, according to data from the International Council on Clean Transportation (ICCT).<br>
+      Everything we do, from the food we eat to the way we travel, results in the release of emissions into the atmosphere with an impact on the environment.<br>
+      But there are some activities that impact more than others: around 2.4% of global CO2 emissions come from air traffic, according to data from the International Council on Clean Transportation (ICCT).<br>
+      Together with other gases and water vapor produced by aircraft, the entire aviation industry is responsible for about 5% of global warming.<br>
+    </p>
+    <button (click)="goToForm()">Calculate footprint of your trip</button>
+  </div>
+
+  <ng-template #loader>
+    <img class="img" src="assets/img/favicon.ico">
+  </ng-template>
+
+</div>
