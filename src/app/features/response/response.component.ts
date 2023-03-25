@@ -15,10 +15,12 @@ export class ResponseComponent implements OnInit{
 
   responseData:any = '';
 
+  passengersNumber:any = this.apiService.flythPassengersNumber
+
   ngOnInit(): void {
     
     setTimeout(()=>{
-      this.apiService.getFootprintData().subscribe((data)=>{ this.responseData = data})
+      this.apiService.getFootprintData().subscribe((data)=>{ this.responseData = data })
     }, 3000);
   }
 

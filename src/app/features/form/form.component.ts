@@ -18,6 +18,7 @@ export class FormComponent {
 
   login( form: NgForm ){
     
+    this.apiService.flythPassengersNumber = form.value.passengers;
     this.apiService.setData(form.value.origin.slice(-4, -1), form.value.destination.slice(-4, -1), form.value.cabinClass, form.value.passengers);
     this.router.navigate(['/response']);
   }

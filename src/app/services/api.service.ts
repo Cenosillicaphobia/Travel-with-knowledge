@@ -12,6 +12,8 @@ export class ApiService {
 
   flyhtData:any
 
+  flythPassengersNumber:any 
+
   constructor( private http: HttpClient ) { }
 
   setData(origin:string, destination:string, cabinClass:string, passengers:bigint){

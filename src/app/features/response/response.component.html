@@ -2,7 +2,8 @@
 
   <div *ngIf="responseData != '' && !isLoading; else loader">
   <h3 class="title">This trip emit:</h3>
-  <p>{{responseData.co2e | number: '4.0-0'}}</p>
+  <p>tot: {{responseData.co2e | number: '4.0-2'}}</p>
+  <p>for passenger: {{responseData.co2e / passengersNumber | number: '4.0-2'}}</p>
   <p>Kg of Co2</p>
   <button (click)="goToHome()">Change trip</button>
   </div>
