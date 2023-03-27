@@ -56,7 +56,7 @@ button:hover {
   }
 }
 
-@media (max-width: 400px){
+@media (max-width: 540px){
 
   .title {
     font-size: 30px;

@@ -80,7 +80,7 @@ button:disabled:hover {
   border: solid 1px skyblue
 }
 
-@media (max-width: 400px){
+@media (max-width: 540px){
 
   .form-title {
     font-size: 30px;

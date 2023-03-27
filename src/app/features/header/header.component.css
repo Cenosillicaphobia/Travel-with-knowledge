@@ -21,7 +21,7 @@
   font-size: 100px;
 }
 
-@media (max-width: 400px){
+@media (max-width: 540px){
 
   .img {
     display: none;
