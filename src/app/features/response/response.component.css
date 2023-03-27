@@ -54,3 +54,24 @@ button:hover {
     transform: rotate(0deg);
   }
 }
+
+@media (max-width: 400px){
+
+  .title {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  button {
+    font-size: 20px;
+  }
+
+  .img {
+    max-width: 80px;
+    height: auto;
+  }
+
+}
